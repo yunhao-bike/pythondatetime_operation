@@ -1,5 +1,12 @@
 # this is a datetime template for usual operation
 
+# Prepare the data
+a=pd.read_csv('stk_catego.csv')
+a=a.rename(columns={'Unnamed: 0':'date'})
+a['date']=list(map(lambda x:datetime.datetime.strptime(str(x),'%Y%m%d'),list(a['date'].values)))
+a.set_index('date',inplace=True)
+
+
 # string to datetime
 start ='2022-04-25'
 start_dt = datetime.datetime.strptime(start,'%Y-%m-%d')
