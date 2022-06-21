@@ -1,0 +1,14 @@
+# this is a datetime template for usual operation
+
+# string to datetime
+start ='2022-04-25'
+start_dt = datetime.datetime.strptime(start,'%Y-%m-%d')
+
+# get a periods data for a time series dataset
+print(a['2022']
+
+# !! Get a single row of data using a specific date (must using .loc)
+start ='2022-04-25'
+start_dt = datetime.datetime.strptime(start,'%Y-%m-%d')
+print(a.loc[start_dt,'category'])
+
